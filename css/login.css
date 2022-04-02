@@ -4,13 +4,29 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  /* border: 1px solid black; */
   margin: auto;
   color: #292929;
-  background-image: url(./images/backg4.jpg);
+  /* background-image: url(../images/backg4.jpg); */
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  overflow: hidden;
+}
+
+.login-overlay {
+  position: absolute;
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.show-overlay {
+  display: block;
+  background-color: #ffffff91;
+  transition: background-color 1s ease-in-out;
 }
 
 .login-open-btn {
@@ -23,17 +39,109 @@
   text-align: start;
   padding: 0 40px;
   background-color: white;
+  background-color: #f7551b;
+  color: white;
   border: none;
+  font-family: poppins;
+  font-weight: 800;
 }
 
 .login-open-btn:hover {
-  background-color: #863309;
+  background-color: #c04507;
   color: white;
   transition: all 0.3s ease-in-out;
 }
 
+.home-container {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  background-image: url(../images/backg5.jpg);
+  background-size: cover;
+}
+
+.top-nav {
+  /* border: 1px solid black; */
+}
+
+.home-body {
+  /* border: 1px solid black; */
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 40%;
+  font-family: Poppins;
+}
+
+.info-holder {
+  /* border: 1px solid black; */
+}
+
+.hero {
+  padding: 20px;
+  /* border: 1px solid black; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.hero h1 {
+  font-size: 4em;
+}
+
+.hero p {
+  font-size: 2em;
+  width: 600px;
+  line-height: 60px;
+}
+
+.design-page {
+  background-image: url(../images/backg.jpg);
+  background-color: white;
+  padding: 10px 20px;
+  /* border: 1px solid black; */
+}
+
+.card-holder {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+
+.card {
+  height: 200px;
+  background-color: #edd4b2;
+  cursor: pointer;
+  width: 200px;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card:hover {
+  background-color: #f7551b;
+  transition: all 0.3s ease-in-out;
+  color: white;
+}
+
+.card i{
+  font-size: 3em;
+}
+
+
 .login-body {
   /* border: 1px solid black; */
+  position: absolute;
   height: 80vh;
   width: 80%;
   max-width: 1200px;
@@ -46,7 +154,7 @@
   box-shadow: 0 2px 5px 5px #cecece;
   box-shadow: 0 2px 8px 2px #252525fb;
   border-radius: 5px;
-  display: none;
+  font-family: Raleway;
 }
 
 .login,
@@ -64,6 +172,25 @@
   align-items: center;
   gap: 30px;
   background-color: white;
+}
+
+.pass-show,
+.close-btn {
+  cursor: pointer;
+}
+
+.close-btn {
+  align-self: flex-end;
+  /* border: 1px solid black; */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.3em;
+  color: grey;
+}
+
+.close-btn:hover {
+  color: #ff6c37;
 }
 
 .welcome-holder {
@@ -96,8 +223,12 @@
 
 .form-item {
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 100px 1fr 50px;
   align-items: center;
+}
+
+.pass-show {
+  margin-left: 15px;
 }
 
 .form-input,
@@ -144,7 +275,7 @@
   flex-grow: 1;
   /* border: 1px solid black; */
   background-color: #e26e34;
-  background-image: url('./images/backg2.jpg');
+  background-image: url('../images/backg2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -159,11 +290,27 @@
   align-items: center;
 }
 
+.header-text-holder {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .info-header-text {
   font-weight: 800;
   font-family: inherit;
   width: 250px;
   text-shadow: 2px 2px#696969;
-  font-size: 2.5em;
+  font-size: 3em;
   /* border: 1px solid black; */
+}
+
+.slideOut {
+  transform: translateX(120%);
+  transition: all 1s ease-in-out;
+}
+
+.slideIn {
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
 }
