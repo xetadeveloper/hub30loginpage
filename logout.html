@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script>
+      function openLogin() {
+        if (window.name != 'hotspot_logout') return true;
+        open('$(link-login)', '_blank', '');
+        window.close();
+        return false;
+      }
+    </script>
+    <title>Hub30 - Logout</title>
+  </head>
+  <body>
+    <main class="container">
+      <nav class="top-nav">
+        <a href="#">
+          <img src="./img/logo.webp" alt="logo" class="logo-img" />
+        </a>
+      </nav>
+
+      <h1 class="message-header">You are now logged out!</h1>
+
+      <form action="$(link-login)" name="login" onSubmit="return openLogin()">
+        <button type="submit" class="login-btn">
+          <h4>Log Back In</h4>
+        </button>
+      </form>
+    </main>
+    <script src="./js/logout.js"></script>
+  </body>
+</html>

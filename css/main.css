@@ -1,0 +1,138 @@
+.container {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 40px;
+  background-image: url(../img/backg5.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: Poppins;
+  color: #424242;
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    font-size: 0.8rem;
+  }
+}
+
+.message-header,
+.info {
+  font-weight: 800;
+  text-align: center;
+}
+
+.login-btn {
+  border: none;
+  height: 40px;
+  width: 200px;
+  background-color: #f05b10;
+  color: white;
+  font-family: Poppins;
+  box-shadow: 0 0 1px 1px #b8b8b8;
+  border-radius: 5px;
+}
+
+.login-btn:hover {
+  background-color: #c54708;
+}
+
+.info a,
+.stat-table a {
+  color: #f05b10;
+}
+
+.info a:hover,
+.stat-table a:hover {
+  color: #e98554;
+}
+
+
+.stat-form {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat-table {
+  background-color: white;
+  border-radius: 10px;
+  min-width: 500px;
+  max-width: 700px;
+  box-shadow: 0 0 10px 5px grey;
+}
+
+@media screen and (max-width: 425px) {
+  .stat-table {
+    width: 90%;
+    min-width: 0;
+  }
+}
+
+.stat-tr:first-child .stat-td {
+  border-top: none;
+}
+
+.stat-tr:last-child .stat-td {
+  border-bottom: none;
+}
+
+.stat-td {
+  padding: 20px;
+  border: 1px solid grey;
+  border-left: none;
+  border-right: none;
+}
+
+.stat-td:first-child {
+  border-right: 1px solid grey;
+}
+
+.stat-td:first-child {
+  border-right: 1px solid grey;
+}
+
+.stat-td:nth-child(2) {
+  padding-left: 5px;
+}
+
+.error {
+  color: #ec4545;
+}
+
+.error-backg {
+  background-image: url(../img/backg8.jpg);
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #1a191971;
+}
+
+.center-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.navigation {
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px 0;
+}

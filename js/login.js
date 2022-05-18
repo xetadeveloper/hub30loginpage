@@ -1,6 +1,12 @@
 document.addEventListener('readystatechange', () => {
   if (document.readyState == 'complete') {
-    // showPassword();
+    const designPage = document.querySelector('.design-page');
+    const heroHeader = document.querySelector('.hero h1');
+    const heroParagraph = document.querySelector('.hero p');
+
+    heroHeader.classList.add('swing-in');
+    heroParagraph.classList.add('fade-in');
+    designPage.classList.add('drop-down');
   }
 });
 
@@ -27,3 +33,4 @@ function showPassword() {
     }
   }
 }
+
